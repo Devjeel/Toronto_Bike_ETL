@@ -1,0 +1,5 @@
+2020-11-09 13:01:01,690.690 : INFO - root - Station Info Downloaded
+2020-11-09 13:01:02,946.946 : INFO - root - Station Bike Data Downloaded
+2020-11-09 13:01:02,946.946 : INFO - root - ETL Process Started
+2020-11-09 13:01:03,069.069 : INFO - root - Exporting 603 Rows to CSV
+2020-11-09 13:01:03,079.079 : INFO - root - ETL Done.

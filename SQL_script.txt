@@ -1,0 +1,28 @@
+-- Import from CSV
+BULK INSERT TORONTO_BIKES
+    FROM 'C:\Path\to\Toronto_Bike_Stations.csv'
+    WITH
+    (
+    FIRSTROW = 2,
+    FIELDTERMINATOR = ',',  
+    ROWTERMINATOR = '\n',   
+    ERRORFILE = 'C:\path\to\errorCSV\ErrorRows.csv', --Export Errored ROWS
+    TABLOCK
+    ); 
+   
+-- Total Rows/stations
+ SELECT COUNT(*) FROM TORONTO_BIKES;
+ 
+-- Average bikes available
+ SELECT AVG(num_bikes_available) FROM TORONTO_BIKES;
+ 
+-- 3 biggest stations with bikes
+SELECT TOP(3) num_bikes_available
+FROM TABLE TORONTO_BIKES
+ORDER BY num_bikes_available DESC
+
+-- 3 smallest stations with bikes
+SELECT TOP(3) num_bikes_available
+FROM TABLE TORONTO_BIKES
+ORDER BY num_bikes_available ASC
+ 
